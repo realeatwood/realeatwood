@@ -5,20 +5,20 @@
   
 
   
-  <title>dart学习笔记（1） | Front End Dog</title>
+  <title>dart - 基础数据类型（1） | Front End Dog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先，dartlang – 官方文档，是所有 dart 项目都会引入的基础库，不包含三方库。cnDartlang – 中文的 dart 学习社区， 的一系列文章。 dart 中万物都是对象.基本类型:  String,  Number: int double   Collections: List Set Map   Booleans。 Runes  &amp;gt; UTF-32编码字符串 ，dar">
+  <meta name="description" content="首先，dartlang – 官方文档，是所有 dart 项目都会引入的基础库，不包含三方库。cnDartlang – 中文的 dart 学习社区， 的一系列文章。 dart 中万物都是对象.基本类型:  String,  Number: int double   Collections: List Set Map   Booleans。 Runes : UTF-32编码字符串 ，dart的St">
 <meta name="keywords" content="dart">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dart学习笔记（1）">
+<meta property="og:title" content="dart - 基础数据类型（1）">
 <meta property="og:url" content="http://yoursite.com/2018/06/21/dart学习笔记（1）/index.html">
 <meta property="og:site_name" content="Front End Dog">
-<meta property="og:description" content="首先，dartlang – 官方文档，是所有 dart 项目都会引入的基础库，不包含三方库。cnDartlang – 中文的 dart 学习社区， 的一系列文章。 dart 中万物都是对象.基本类型:  String,  Number: int double   Collections: List Set Map   Booleans。 Runes  &amp;gt; UTF-32编码字符串 ，dar">
+<meta property="og:description" content="首先，dartlang – 官方文档，是所有 dart 项目都会引入的基础库，不包含三方库。cnDartlang – 中文的 dart 学习社区， 的一系列文章。 dart 中万物都是对象.基本类型:  String,  Number: int double   Collections: List Set Map   Booleans。 Runes : UTF-32编码字符串 ，dart的St">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-23T09:16:51.797Z">
+<meta property="og:updated_time" content="2018-06-23T09:18:44.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dart学习笔记（1）">
-<meta name="twitter:description" content="首先，dartlang – 官方文档，是所有 dart 项目都会引入的基础库，不包含三方库。cnDartlang – 中文的 dart 学习社区， 的一系列文章。 dart 中万物都是对象.基本类型:  String,  Number: int double   Collections: List Set Map   Booleans。 Runes  &amp;gt; UTF-32编码字符串 ，dar">
+<meta name="twitter:title" content="dart - 基础数据类型（1）">
+<meta name="twitter:description" content="首先，dartlang – 官方文档，是所有 dart 项目都会引入的基础库，不包含三方库。cnDartlang – 中文的 dart 学习社区， 的一系列文章。 dart 中万物都是对象.基本类型:  String,  Number: int double   Collections: List Set Map   Booleans。 Runes : UTF-32编码字符串 ，dart的St">
   
     <link rel="alternate" href="/atom.xml" title="Front End Dog" type="application/atom+xml">
   
@@ -43,7 +43,7 @@
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">a little coder</a>
+          <a href="/" id="subtitle">a little coder loves jerry</a>
         </h2>
       
     </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      dart学习笔记（1）
+      dart - 基础数据类型（1）
     </h1>
   
 
@@ -107,7 +107,7 @@
 </ul>
 </li>
 <li><code>Booleans</code>。</li>
-<li><code>Runes</code>  &gt; UTF-32编码字符串 ，dart的String是UTF-16 ,可以生成一些小图标、emoji表情</li>
+<li><code>Runes</code> : UTF-32编码字符串 ，dart的String是UTF-16 ,Runes 可以生成一些小图标、emoji表情.</li>
 <li><code>Symbols</code><br>他们都继承自<code>Object</code>,默认初始值都是<code>null</code>。So ，就像 js 一样，可以调用很多方法～</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> str = <span class="string">"eatwoood"</span>;</span><br><span class="line">str = <span class="number">123</span> <span class="comment">/* Unhandled exception:Invalid argument(s): 123 */</span></span><br><span class="line">str = <span class="string">'123'</span> <span class="comment">/* ps：紧接着再赋值为string类型的值，最后编译却不会报错 */</span></span><br><span class="line"></span><br><span class="line">&lt;!-- 字符串拼接，高版本支持‘+’ --&gt;</span><br><span class="line">print(<span class="string">"Name：$str"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//声明原始字符串，直接在字符串前加字符“r”</span></span><br><span class="line"><span class="comment">//可以避免“\”的转义作用，在正则表达式里特别有用</span></span><br><span class="line">print(r<span class="string">"换行符：\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//Dart中数值是num，它有两个子类型：int 和 double</span></span><br><span class="line"><span class="comment">//int是任意长度的整数，double是双精度浮点数</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">0xFF</span>;</span><br><span class="line">print(<span class="string">"整型转换为16进制：$hex —&gt; 0x$&#123;hex.toRadixString(16).toUpperCase()&#125;"</span>);</span><br><span class="line"><span class="comment">// 整型转换为16进制：255 —&gt; 0xFF</span></span><br></pre></td></tr></table></figure>
@@ -183,7 +183,7 @@
       <ul>
         
           <li>
-            <a href="/2018/06/21/dart学习笔记（1）/">dart学习笔记（1）</a>
+            <a href="/2018/06/21/dart学习笔记（1）/">dart - 基础数据类型（1）</a>
           </li>
         
           <li>
