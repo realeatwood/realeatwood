@@ -69,6 +69,76 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-emoji及一些特殊编码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/25/emoji及一些特殊编码/" class="article-date">
+  <time datetime="2018-07-25T01:51:47.000Z" itemprop="datePublished">2018-07-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/25/emoji及一些特殊编码/">emoji及一些特殊编码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>Unicode 平面，</li>
+<li>BMP 的字符可以使用 charAt(index)来处理,计数可以使用 length()</li>
+<li>其它平面字符，需要用 codePointAt(index),计数可以使用 codePointCount(0,str.lenght())<br>-</li>
+<li>Unicode 可以逻辑分为 17 平面（Plane），每个平面拥有 65536（ = 216）个代码点，虽然目前只有少数平面被使</li>
+<li>用。</li>
+<li>平面 0 (0000–FFFF): 基本多文种平面（Basic Multilingual Plane, BMP）.</li>
+<li>平面 1 (10000–1FFFF): 多文种补充平面（Supplementary Multilingual Plane, SMP）.</li>
+<li>平面 2 (20000–2FFFF): 表意文字补充平面（Supplementary Ideographic Plane, SIP）.</li>
+<li>平面 3 (30000–3FFFF): 表意文字第三平面（Tertiary Ideographic Plane, TIP）.</li>
+<li>平面 4 to 13 (40000–DFFFF)尚未使用</li>
+<li>平面 14 (E0000–EFFFF): 特别用途补充平面（Supplementary Special-purpose Plane, SSP）</li>
+<li>平面 15 (F0000–FFFFF)保留作为私人使用区（Private Use Area, PUA）</li>
+<li>平面 16 (100000–10FFFF)，保留作为私人使用区（Private Use Area, PUA）<br>-</li>
+<li>参考：</li>
+<li>维基百科: <a href="http://en.wikipedia.org/wiki/Emoji" target="_blank" rel="noopener">http://en.wikipedia.org/wiki/Emoji</a></li>
+<li>GITHUB: <a href="http://punchdrunker.github.io/iOSEmoji/" target="_blank" rel="noopener">http://punchdrunker.github.io/iOSEmoji/</a></li>
+<li>杂项象形符号:1F300-1F5FF</li>
+<li>表情符号：1F600-1F64F</li>
+<li>交通和地图符号:1F680-1F6FF</li>
+<li>杂项符号：2600-26FF</li>
+<li>符号字体:2700-27BF</li>
+<li>国旗：1F100-1F1FF</li>
+<li>箭头：2B00-2BFF 2900-297F</li>
+<li>各种技术符号：2300-23FF</li>
+<li>字母符号: 2100–214F</li>
+<li>中文符号： 303D 3200–32FF 2049 203C</li>
+<li>Private Use Area:E000-F8FF;</li>
+<li>High Surrogates D800..DB7F;</li>
+<li>High Private Use Surrogates DB80..DBFF</li>
+<li>Low Surrogates DC00..DFFF D800-DFFF E000-F8FF</li>
+<li>标点符号：2000-200F 2028-202F 205F 2065-206F</li>
+<li>变异选择器：IOS 独有 FE00-FE0F</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/25/emoji及一些特殊编码/" data-id="cjk0h51cr0001ei4182c7fuo9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-dart学习笔记（1）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/06/21/dart学习笔记（1）/" class="article-date">
@@ -107,7 +177,10 @@
 </ul>
 </li>
 <li><code>Booleans</code>。</li>
-<li><code>Runes</code> : UTF-32编码字符串 ，dart的String是UTF-16 ,Runes 可以生成一些小图标、emoji表情.</li>
+<li><code>Runes</code> : UTF-32编码字符串 ，dart的String是UTF-16 ,Runes 可以生成一些小图标、emoji表情. 例如:sunglasses:可以如下生成：  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> emoji = <span class="keyword">new</span> Runes(<span class="string">'\u&#123;1f60e&#125;'</span>)</span><br><span class="line">print(emoji)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><code>Symbols</code><br>他们都继承自<code>Object</code>,默认初始值都是<code>null</code>。So ，就像 js 一样，可以调用很多方法～</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> str = <span class="string">"eatwoood"</span>;</span><br><span class="line">str = <span class="number">123</span> <span class="comment">/* Unhandled exception:Invalid argument(s): 123 */</span></span><br><span class="line">str = <span class="string">'123'</span> <span class="comment">/* ps：紧接着再赋值为string类型的值，最后编译却不会报错 */</span></span><br><span class="line"></span><br><span class="line">&lt;!-- 字符串拼接，高版本支持‘+’ --&gt;</span><br><span class="line">print(<span class="string">"Name：$str"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//声明原始字符串，直接在字符串前加字符“r”</span></span><br><span class="line"><span class="comment">//可以避免“\”的转义作用，在正则表达式里特别有用</span></span><br><span class="line">print(r<span class="string">"换行符：\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//Dart中数值是num，它有两个子类型：int 和 double</span></span><br><span class="line"><span class="comment">//int是任意长度的整数，double是双精度浮点数</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">0xFF</span>;</span><br><span class="line">print(<span class="string">"整型转换为16进制：$hex —&gt; 0x$&#123;hex.toRadixString(16).toUpperCase()&#125;"</span>);</span><br><span class="line"><span class="comment">// 整型转换为16进制：255 —&gt; 0xFF</span></span><br></pre></td></tr></table></figure>
@@ -118,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/21/dart学习笔记（1）/" data-id="cjiqtn3kv0000pu6blp9hsccg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/21/dart学习笔记（1）/" data-id="cjk0h51cn0000ei41t67rmera" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dart/">dart</a></li></ul>
@@ -161,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/14/深拷贝和浅拷贝/" data-id="cjiqtn3kz0001pu6b9m0u7ye3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/14/深拷贝和浅拷贝/" data-id="cjk0h51cw0003ei41z9jci8ce" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -205,7 +278,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li></ul>
     </div>
   </div>
 
@@ -216,6 +289,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/07/25/emoji及一些特殊编码/">emoji及一些特殊编码</a>
+          </li>
         
           <li>
             <a href="/2018/06/21/dart学习笔记（1）/">dart - 基础数据类型（1）</a>
