@@ -69,6 +69,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-函数的防抖和节流" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/13/函数的防抖和节流/" class="article-date">
+  <time datetime="2018-08-13T03:19:05.000Z" itemprop="datePublished">2018-08-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/13/函数的防抖和节流/">函数的防抖和节流</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>节流：在执行某个动作时，保证函数在周期内的执行一次。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> input = <span class="built_in">document</span>.getElementById(<span class="string">"input"</span>);</span><br><span class="line">input.addEventListener(<span class="string">"input"</span>, throttle(doFetch, <span class="number">3000</span>));</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn, time</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> last = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">    <span class="keyword">if</span> (now - last &gt;= time) &#123;</span><br><span class="line">      fn();</span><br><span class="line">      last = now;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>防抖：在执行某个动作结束之后，才执行一次。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">input.addEventListener(<span class="string">"input"</span>, debounce(doFetch, <span class="number">500</span>));</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, time</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (timer) clearTimeout(timer);</span><br><span class="line">    timer = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      doFetch();</span><br><span class="line">    &#125;, time);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/13/函数的防抖和节流/" data-id="cjkrq1d0u000351411yauo5gx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-emoji及一些特殊编码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/07/25/emoji及一些特殊编码/" class="article-date">
@@ -129,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/25/emoji及一些特殊编码/" data-id="cjk0h51cr0001ei4182c7fuo9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/25/emoji及一些特殊编码/" data-id="cjkrq1d0p00015141m6ygtfbr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/21/dart学习笔记（1）/" data-id="cjk0h51cn0000ei41t67rmera" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/21/dart学习笔记（1）/" data-id="cjkrq1d0k000051417d6bvo7g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dart/">dart</a></li></ul>
@@ -234,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/14/深拷贝和浅拷贝/" data-id="cjk0h51cw0003ei41z9jci8ce" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/14/深拷贝和浅拷贝/" data-id="cjkrq1d0w0004514123mjv4sd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -269,7 +311,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/dart/" style="font-size: 10px;">dart</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+      <a href="/tags/dart/" style="font-size: 10px;">dart</a> <a href="/tags/js/" style="font-size: 20px;">js</a>
     </div>
   </div>
 
@@ -278,7 +320,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li></ul>
     </div>
   </div>
 
@@ -289,6 +331,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/08/13/函数的防抖和节流/">函数的防抖和节流</a>
+          </li>
         
           <li>
             <a href="/2018/07/25/emoji及一些特殊编码/">emoji及一些特殊编码</a>
